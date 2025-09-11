@@ -3,7 +3,7 @@
 Minimal, professional portfolio built with Next.js (App Router), TypeScript, Tailwind CSS, and Framer Motion. Deployed on Vercel. Accessible, fast, and recruiter‑friendly.
 
 [![License](https://img.shields.io/badge/license-MIT-informational.svg)](#license)
-[![Build](https://img.shields.io/badge/build-Vercel-success.svg)](https://vercel.com/)
+[![Build](https://valetiportfolio.vercel.app)](https://vercel.com/)
 [![Tech Stack](https://img.shields.io/badge/stack-Next.js%20%7C%20TypeScript%20%7C%20Tailwind%20%7C%20FramerMotion-blueviolet.svg)](#tech-stack)
 
 ---
@@ -17,18 +17,6 @@ This is my personal portfolio website showcasing projects, experience, and conta
 - Motion: Framer Motion (reduced motion respected)
 - Deployment: Vercel (Preview + Production)
 - A11y: Semantic HTML, focus-visible, alt text, keyboard-friendly nav
-
----
-
-## ✅ Features
-
-- Clean top navigation and pinned footer
-- Concise Home with About, Education, Experience, Featured Projects
-- Shared project data for Home and Projects (single source of truth)
-- Contact form with server route (Resend or SMTP) + mailto fallback
-- Resume preview and download at `/resume` (from `public/resume/resume.pdf`)
-- Sitemap and robots configured for SEO
-- Solid colors, subtle hover/motion, accessible focus states
 
 ---
 
