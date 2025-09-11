@@ -2,24 +2,22 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { fadeUp, staggerChildren } from "@/lib/motion";
 
 export default function Hero() {
   return (
-    <section className="py-12 md:py-16">
+    <section className="pt-10 md:pt-14 pb-8 md:pb-10">
       <motion.div
-        initial={{ opacity: 0, y: 8 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
+        variants={staggerChildren}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.3 }}
         className="max-w-3xl"
       >
-        <h1>Front‑End Developer</h1>
-        <p className="mt-3">
+        <motion.h1 variants={fadeUp}>Vishnu Vivek</motion.h1>
+        <motion.p variants={fadeUp} className="mt-3">
           I craft clean, accessible interfaces with a focus on performance and UX.
-        </p>
-        <div className="mt-6 flex items-center gap-3">
-          <Link href="/projects" className="btn-primary">View Projects</Link>
-          <Link href="/resume.pdf" className="btn-ghost" target="_blank" rel="noopener noreferrer">Resume</Link>
-        </div>
+        </motion.p>
       </motion.div>
     </section>
   );
