@@ -8,10 +8,15 @@
     "start": "next start -p 3000",
     "lint": "next lint"
   },
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
     "framer-motion": "^11.3.30",
     "lucide-react": "^0.477.0",
     "next": "^14.2.5",
+    "nodemailer": "^6.9.13",
+    "critters": "^0.0.20",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

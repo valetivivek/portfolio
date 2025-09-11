@@ -52,6 +52,13 @@ export async function POST(req: Request) {
     const msg = String(message || "");
     if (msg.length < 10 || msg.length > 5000) return NextResponse.json({ ok: false, error: "Invalid message length" }, { status: 400 });
 
+    // Fail-safe: if neither Resend nor SMTP configured, return 503 with guidance
+    const hasResend = !!process.env.RESEND_API_KEY;
+    const hasSmtp = !!(process.env.SMTP_HOST && process.env.SMTP_PORT && process.env.SMTP_USER && process.env.SMTP_PASS);
+    if (!hasResend && !hasSmtp) {
+      return NextResponse.json({ ok: false, error: "Email service not configured. Use the email button as fallback." }, { status: 503 });
+    }
+
     await sendEmail(name, email, msg);
     return NextResponse.json({ ok: true });
   } catch (e) {

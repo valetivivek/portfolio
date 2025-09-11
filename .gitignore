@@ -36,3 +36,4 @@ Thumbs.db
 # Coverage
 coverage/
 
+.vercel
