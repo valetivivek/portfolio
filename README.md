@@ -2,7 +2,6 @@
 
 Minimal, professional portfolio built with Next.js (App Router), TypeScript, Tailwind CSS, and Framer Motion. Deployed on Vercel. Accessible, fast, and recruiter‑friendly.
 
-[![License](https://img.shields.io/badge/license-MIT-informational.svg)](#license)
 [![Demo](https://img.shields.io/badge/demo-Live-success.svg)](https://valetiportfolio.vercel.app/)
 [![Tech Stack](https://img.shields.io/badge/stack-Next.js%20%7C%20TypeScript%20%7C%20Tailwind%20%7C%20FramerMotion-blueviolet.svg)](#tech-stack)
 
