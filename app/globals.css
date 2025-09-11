@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+:root {
+  /* Solid theme tokens (teal + olive) */
+  --bg: 255 255 255;
+  --surface: 248 250 252; /* slate-50 */
+  --border: 226 232 240; /* slate-200 */
+  --text: 15 23 42; /* slate-900 */
+  --muted: 100 116 139; /* slate-500 */
+  --ring: 5 150 105; /* primary-600 */
+}
+
+html, body {
+  @apply bg-bg text-text antialiased;
+}
+
+/* Focus styles */
+*:focus-visible {
+  @apply outline-none ring-2 ring-primary-600 ring-offset-2 ring-offset-white;
+}
+
+/* Typography defaults */
+@layer base {
+  h1 { @apply text-3xl md:text-4xl font-semibold tracking-tight; }
+  h2 { @apply text-2xl md:text-3xl font-semibold tracking-tight; }
+  h3 { @apply text-xl md:text-2xl font-semibold tracking-tight; }
+  p { @apply text-base leading-relaxed text-slate-700; }
+  a { @apply text-primary-700 hover:text-primary-800 underline-offset-4 hover:underline; }
+}
+
+@layer components {
+  .container-page { @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8; }
+  .btn-primary { @apply inline-flex items-center gap-2 rounded-md bg-primary-600 px-4 py-2 text-white shadow-subtle transition hover:bg-primary-700 focus-visible:ring-primary-600; }
+  .btn-ghost { @apply inline-flex items-center gap-2 rounded-md px-3 py-2 text-slate-700 hover:bg-slate-100 focus-visible:ring-primary-600; }
+  .card { @apply rounded-lg border border-border bg-white shadow-subtle; }
+  .tag { @apply rounded-md bg-slate-100 px-2 py-1 text-xs text-slate-700; }
+}
+
+
