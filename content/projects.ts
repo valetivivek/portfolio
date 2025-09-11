@@ -35,7 +35,7 @@ export const PROJECTS: Project[] = [
     emoji: "🤖",
     summary: "Interactive chatbot with real-time communication.",
     tags: ["React", "Flask", "WebSockets", "Docker"],
-    github: "https://github.com/valetivivek/pdf2xml",
+    github: "https://github.com/valetivivek/rulebot",
     featured: true,
   },
 ];
