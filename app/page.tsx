@@ -4,6 +4,7 @@ import ExperienceTimeline from "@/components/ExperienceTimeline";
 import ProjectCard from "@/components/ProjectCard";
 import EducationCard from "@/components/EducationCard";
 import About from "@/components/About";
+import { PROJECTS } from "@/content/projects";
  
 
 export default function HomePage() {
@@ -87,28 +88,8 @@ export default function HomePage() {
           <Link className="btn-ghost" href="/projects">View all</Link>
         </div>
         <div className="mt-4 grid gap-6 sm:grid-cols-2">
-          {[
-            {
-              title: "JobScoop",
-              description: "Job search platform with filters, secure auth, and dashboards.",
-              tech: ["Go", "React", "PostgreSQL", "Redis", "Docker", "Cypress"],
-              github: "https://github.com/crazyotakuu/JobScoop",
-              live: undefined,
-            },
-            {
-              title: "Reddit Forum",
-              description: "Scalable forum with concurrency safety and REST APIs.",
-              tech: ["Go", "PostgreSQL", "REST"],
-              github: "https://github.com/valetivivek/redditclone",
-            },
-            {
-              title: "Rule‑Based Chatbot",
-              description: "Interactive chatbot with real-time communication.",
-              tech: ["React", "Flask", "WebSockets", "Docker"],
-              github: "https://github.com/valetivivek/pdf2xml",
-            },
-          ].map((p) => (
-            <ProjectCard key={p.title} project={p as any} />
+          {PROJECTS.filter((p) => p.featured).map((p) => (
+            <ProjectCard key={p.id} project={p} />
           ))}
         </div>
       </section>
