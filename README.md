@@ -1,117 +1,174 @@
-## Portfolio (Next.js 14 + TypeScript + Tailwind + Framer Motion)
+# Vishnu Vivek Valeti — Portfolio
 
-Minimal, recruiter-friendly portfolio. Deployed best on Vercel.
+Minimal, professional portfolio built with Next.js (App Router), TypeScript, Tailwind CSS, and Framer Motion. Deployed on Vercel. Accessible, fast, and recruiter‑friendly.
 
-### Getting Started
+[![License](https://img.shields.io/badge/license-MIT-informational.svg)](#license)
+[![Build](https://img.shields.io/badge/build-Vercel-success.svg)](https://vercel.com/)
+[![Tech Stack](https://img.shields.io/badge/stack-Next.js%20%7C%20TypeScript%20%7C%20Tailwind%20%7C%20FramerMotion-blueviolet.svg)](#tech-stack)
 
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-2. Run dev server:
-   ```bash
-   npm run dev
-   ```
-3. Build and start:
-   ```bash
-   npm run build && npm start
-   ```
+---
 
-### Customize
+## ✨ Introduction
 
-- Update project data in `app/projects/page.tsx`.
-- Replace contact links in `app/contact/page.tsx`.
-- Resume: place a file at `public/resume/resume.pdf` to enable preview and download at `/resume`.
+This is my personal portfolio website showcasing projects, experience, and contact information. It focuses on clarity, solid color design (no glassmorphism), subtle animations, and strong accessibility.
 
-### Contact email API (optional)
+- Framework: Next.js 14 (App Router) + TypeScript
+- Styling: Tailwind CSS, solid teal/olive palette
+- Motion: Framer Motion (reduced motion respected)
+- Deployment: Vercel (Preview + Production)
+- A11y: Semantic HTML, focus-visible, alt text, keyboard-friendly nav
 
-Set these environment variables (in Vercel Project Settings or `.env.local`) to enable sending via Resend:
+---
 
+## ✅ Features
+
+- Clean top navigation and pinned footer
+- Concise Home with About, Education, Experience, Featured Projects
+- Shared project data for Home and Projects (single source of truth)
+- Contact form with server route (Resend or SMTP) + mailto fallback
+- Resume preview and download at `/resume` (from `public/resume/resume.pdf`)
+- Sitemap and robots configured for SEO
+- Solid colors, subtle hover/motion, accessible focus states
+
+---
+
+## 🗂 Project Structure
+
+```bash
+.
+├─ app/
+│  ├─ api/
+│  │  └─ contact/route.ts        
+│  ├─ contact/page.tsx           
+│  ├─ experience/page.tsx        
+│  ├─ projects/page.tsx          
+│  ├─ resume/page.tsx            
+│  ├─ components/
+│  │  ├─ About.tsx               
+│  │  ├─ EducationCard.tsx
+│  │  ├─ ExperienceTimeline.tsx
+│  │  ├─ Footer.tsx
+│  │  ├─ Hero.tsx
+│  │  └─ ProjectCard.tsx         
+│  ├─ layout.tsx                 
+│  ├─ page.tsx                   
+│  ├─ robots.txt                 
+│  └─ sitemap.ts                 
+├─ content/
+│  ├─ about.ts                   
+│  └─ projects.ts               
+├─ lib/
+│  └─ motion.ts                  
+├─ public/
+│  └─ resume/
+│     ├─ resume.pdf              
+│     └─ README.txt
+├─ styles / config
+│  ├─ app/globals.css            
+│  ├─ tailwind.config.ts
+│  └─ postcss.config.mjs
+├─ next.config.mjs               
+├─ vercel.json                   
+├─ package.json
+├─ tsconfig.json
+└─ types/nodemailer.d.ts         
 ```
-RESEND_API_KEY=...
-CONTACT_FROM_EMAIL=sender@yourdomain.com
-CONTACT_TO_EMAIL=vivekvaleti7053@gmail.com
+
+---
+
+## 🧰 Tech Stack
+
+- React + Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Vercel (hosting & CI/CD)
+- Optional: Resend (email) or SMTP (Nodemailer)
+
+---
+
+## 🚀 Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/<your-username>/<your-repo>.git
+cd <your-repo>
+
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Build & run production locally
+npm run build
+npm start
 ```
 
-Without envs, the API will no-op and the form will show success; users can also use the "Open email client" fallback.
+---
 
-### Deployment
+## 📦 Usage
 
-- Push to GitHub and import into Vercel. A `vercel.json` is provided.
-- Set `NEXT_PUBLIC_SITE_URL` for accurate sitemap URLs.
+- Home, Projects, Experience, Contact, and Resume are ready out-of-the-box.
+- Update your resume at `public/resume/resume.pdf` to enable preview at `/resume`.
+- Update About copy in `content/about.ts`.
+- Update projects in `content/projects.ts` (Home uses featured projects; Projects page shows all).
 
-### Deploy to Vercel (Dashboard)
+---
 
-1. Push this repo to GitHub.
-2. On Vercel, "Add New Project" → import this repo.
-3. Framework Preset: Next.js (auto).
-4. Set Environment Variables for Preview and Production:
-   - `NEXT_PUBLIC_SITE_URL=https://your-domain.com`
-   - `RESEND_API_KEY=...` (or SMTP vars below)
-   - `CONTACT_TO=vivekvaleti7053@gmail.com`
-   - `CONTACT_FROM=portfolio@your-domain.dev`
-   - Optional SMTP: `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`
-5. Click Deploy. Attach a custom domain if desired.
+## ☁️ Deployment (Vercel)
 
-### Deploy via CLI (Windows PowerShell)
+Dashboard:
+1. Push repo to GitHub.
+2. Import project in Vercel (Next.js is auto-detected).
+3. Add env vars for Preview & Production (see Configuration).
+4. Deploy and set your custom domain.
 
-Prereqs: `npm i -g vercel`
-
+CLI (Windows PowerShell):
 ```powershell
-# Login and link
+npm i -g vercel
 vercel login
 vercel link --confirm
 
-# Set env vars (Preview)
+# Preview envs
 vercel env add NEXT_PUBLIC_SITE_URL preview
-vercel env add RESEND_API_KEY preview
 vercel env add CONTACT_TO preview
 vercel env add CONTACT_FROM preview
-# Optional SMTP
-# vercel env add SMTP_HOST preview
-# vercel env add SMTP_PORT preview
-# vercel env add SMTP_USER preview
-# vercel env add SMTP_PASS preview
+# Optional: vercel env add RESEND_API_KEY preview
+# Optional SMTP: vercel env add SMTP_HOST/SMTP_PORT/SMTP_USER/SMTP_PASS preview
 
-# Set env vars (Production)
+# Production envs
 vercel env add NEXT_PUBLIC_SITE_URL production
-vercel env add RESEND_API_KEY production
 vercel env add CONTACT_TO production
 vercel env add CONTACT_FROM production
-# Optional SMTP
-# vercel env add SMTP_HOST production
-# vercel env add SMTP_PORT production
-# vercel env add SMTP_USER production
-# vercel env add SMTP_PASS production
+# Optional: vercel env add RESEND_API_KEY production
+# Optional SMTP: vercel env add SMTP_HOST/SMTP_PORT/SMTP_USER/SMTP_PASS production
 
-# First deploy (creates a Preview URL)
-vercel --prod=false --confirm
-
-# Promote to production
-vercel --prod --confirm
+# Deploy
+vercel --prod=false --yes   # Preview
+vercel --prod --confirm     # Production
 ```
 
-### Production Readiness
+Notes:
+- `vercel.json` adds security headers (X-Frame-Options, X-Content-Type-Options).
+- `next.config.mjs` enables optimizeCss and modern image formats.
+- `package.json` engines set Node >= 18.
 
-- Node runtime: `>=18` specified in `package.json`.
-- `vercel.json` adds security headers and routes `/resume`.
-- `next.config.mjs` enables `optimizeCss` and modern image formats.
-- `/resume` previews `public/resume/resume.pdf` and offers download; shows guidance if missing.
-- Contact API at `app/api/contact/route.ts` uses Resend or SMTP.
-  - If not configured, returns a friendly 503 and UI has mailto fallback.
+---
 
-### Env Vars
+## 🧪 Features & Endpoints
 
-```
-NEXT_PUBLIC_SITE_URL=https://your-domain.com
-RESEND_API_KEY=...
-CONTACT_TO=vivekvaleti7053@gmail.com
-CONTACT_FROM=portfolio@your-domain.dev
-# SMTP (optional if not using Resend)
-SMTP_HOST=
-SMTP_PORT=
-SMTP_USER=
-SMTP_PASS=
-```
+- `/api/contact` (POST): Validates input and sends mail via Resend or SMTP when configured.
+  - If no provider configured, returns `503` with guidance; UI shows a visible mailto fallback.
+- `/resume`: Embeds `public/resume/resume.pdf` and provides a Download button. Shows a helpful empty state if missing.
 
+---
 
+## 📬 Contact
+
+- Author: **Vishnu Vivek Valeti**
+- Email: **vivekvaleti7053@gmail.com**
+- LinkedIn: `https://www.linkedin.com/in/valetivishnuvivek/`
+- GitHub: `https://github.com/valetivivek`
+
+---
