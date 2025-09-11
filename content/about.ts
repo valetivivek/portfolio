@@ -1,11 +1,9 @@
 export const ABOUT = {
-  copy: `I’m Vishnu Vivek Valeti, a graduate student in Computer Science at the University of Florida, specializing in building scalable, performant, and accessible software systems.
+  copy: `I’m Vishnu Vivek Valeti, a graduate student in Computer Science at the University of Florida with a passion for building software that is scalable, performant, and accessible. My work spans front-end and full-stack development, where I enjoy crafting clean React/Next.js interfaces, reusable UI components, and data-driven dashboards. I also have hands-on experience with backend systems in Go, Python, and Java, along with SQL/NoSQL databases, cloud platforms like AWS, and containerized deployments using Docker.
 
-My focus lies in front-end and full-stack development, where I craft clean React/Next.js interfaces, reusable UI components, and data-driven dashboards. I also work on backend systems in Go, Python, and Java, with experience across SQL/NoSQL databases, cloud services (AWS), and containerized deployments (Docker).
+Professionally, I’ve contributed as a Graduate Research Assistant at UF, where I developed interactive dashboards and machine learning pipelines to evaluate fairness in AI models. I also built production-ready portals and dashboards at Vignan University, helping streamline workflows and improve accessibility for hundreds of users. These experiences have taught me how to balance technical depth with user-centered design.
 
-Professionally, I’ve contributed as a Graduate Research Assistant at UF, where I built interactive dashboards and ML pipelines to evaluate fairness in AI models. I’ve also delivered production-ready portals and dashboards at Vignan University, improving workflows and accessibility for hundreds of users.
-
-Beyond academics, I love working on personal projects like JobScoop, a job search platform with full-stack integration, and a Reddit-style discussion forum in Go. I’m motivated by solving complex problems, designing inclusive UIs, and turning ideas into reliable, impactful applications.`,
+Outside of academics, I love working on personal projects that challenge me to explore new technologies and solve real problems. Some of these include JobScoop, a job search platform with full-stack integration, and a Reddit-style discussion forum built in Go. At my core, I’m driven by curiosity, problem-solving, and the joy of turning ideas into reliable, impactful applications.`,
   highlights: [
     "🌐 Full-stack projects with React, Next.js, Go, PostgreSQL, and Docker",
     "🤖 AI fairness research with TensorFlow, PyTorch, and ML pipelines",

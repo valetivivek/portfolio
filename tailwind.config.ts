@@ -34,6 +34,11 @@ const config: Config = {
           800: "#2C4631",
           900: "#1F3123"
         },
+        brand: {
+          teal: "#0F766E",
+          olive: "#556B2F",
+          mint: "#10B981",
+        },
         bg: "rgb(var(--bg))",
         surface: "rgb(var(--surface))",
         border: "rgb(var(--border))",

@@ -13,9 +13,9 @@ export default function HomePage() {
       <About />
 
       {/* Education */}
-      <section className="py-8 md:py-12">
+      <section className="py-12 md:py-16">
         <div className="flex items-center justify-between">
-          <h2>Education</h2>
+          <h2>🎓 Education</h2>
         </div>
         <div className="mt-4 grid gap-6 md:grid-cols-2">
           <EducationCard
@@ -58,12 +58,15 @@ export default function HomePage() {
             }}
           />
         </div>
+        <div className="mt-4">
+          <a className="btn-ghost" href="/resume" target="_blank" rel="noopener noreferrer">View Resume</a>
+        </div>
       </section>
 
       {/* Experience preview */}
-      <section className="py-8 md:py-12">
+      <section className="py-12 md:py-16">
         <div className="flex items-center justify-between">
-          <h2>Experience</h2>
+          <h2>💼 Experience</h2>
           <Link className="btn-ghost" href="/experience">View all</Link>
         </div>
         <div className="mt-4">
@@ -78,7 +81,7 @@ export default function HomePage() {
 
       {/* Featured Projects */
       }
-      <section className="py-8 md:py-12">
+      <section className="py-12 md:py-16">
         <div className="flex items-center justify-between">
           <h2>Featured Projects</h2>
           <Link className="btn-ghost" href="/projects">View all</Link>
@@ -86,16 +89,23 @@ export default function HomePage() {
         <div className="mt-4 grid gap-6 sm:grid-cols-2">
           {[
             {
-              title: "UI Component Library",
-              description: "Accessible React components with headless patterns.",
-              tech: ["React", "TypeScript", "Tailwind"],
-              github: "https://github.com/valetivivek/ui-library",
+              title: "JobScoop",
+              description: "Job search platform with filters, secure auth, and dashboards.",
+              tech: ["Go", "React", "PostgreSQL", "Redis", "Docker", "Cypress"],
+              github: "https://github.com/crazyotakuu/JobScoop",
+              live: undefined,
             },
             {
-              title: "Portfolio Website",
-              description: "This site. Next.js App Router with clean animations.",
-              tech: ["Next.js", "Tailwind", "Framer Motion"],
-              github: "https://github.com/valetivivek/portfolio",
+              title: "Reddit Forum",
+              description: "Scalable forum with concurrency safety and REST APIs.",
+              tech: ["Go", "PostgreSQL", "REST"],
+              github: "https://github.com/valetivivek/redditclone",
+            },
+            {
+              title: "Rule‑Based Chatbot",
+              description: "Interactive chatbot with real-time communication.",
+              tech: ["React", "Flask", "WebSockets", "Docker"],
+              github: "https://github.com/valetivivek/pdf2xml",
             },
           ].map((p) => (
             <ProjectCard key={p.title} project={p as any} />
@@ -103,14 +113,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-10">
-        <div className="card p-6 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+      <section className="py-12 md:py-16">
+        <div className="card p-4 rounded-xl border bg-white shadow-sm flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
           <div>
             <h2>Let’s work together</h2>
             <p className="mt-1 text-slate-700">Reach out for roles or internships.</p>
           </div>
           <div className="flex gap-3">
-            <a className="btn-primary" href="mailto:vivekvaleti7053@gmail.com">Email me</a>
+            <a className="btn-primary" href="mailto:vivekvaleti7053@gmail.com?subject=Portfolio%20Inquiry">Email me</a>
             <a className="btn-ghost" href="/resume">View resume</a>
           </div>
         </div>
