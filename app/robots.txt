@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://vishnuvivek.dev/sitemap.xml
 
 

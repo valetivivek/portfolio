@@ -1,4 +1,14 @@
 import ExperienceTimeline from "@/components/ExperienceTimeline";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Experience",
+  description: "My professional experience as a Graduate Research Assistant at University of Florida and Software Development roles at Vignan University.",
+  openGraph: {
+    title: "Experience | Vishnu Vivek",
+    description: "My professional experience as a Graduate Research Assistant at University of Florida and Software Development roles at Vignan University.",
+  },
+};
 
 const experience = [
   {

@@ -1,6 +1,16 @@
 import fs from "node:fs";
 import path from "node:path";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Resume",
+  description: "Download Vishnu Vivek's resume - Graduate CS student at University of Florida with experience in full-stack development, React, Next.js, and Go.",
+  openGraph: {
+    title: "Resume | Vishnu Vivek",
+    description: "Download Vishnu Vivek's resume - Graduate CS student at University of Florida with experience in full-stack development.",
+  },
+};
 
 function getResumePath() {
   const p = path.join(process.cwd(), "public", "resume", "resume.pdf");

@@ -36,6 +36,8 @@ export default function Navbar() {
                   href={l.href}
                   className={`btn-ghost ${isActive ? "font-semibold text-slate-900" : ""}`}
                   aria-current={isActive ? "page" : undefined}
+                  target={l.href === "/resume" ? "_blank" : undefined}
+                  rel={l.href === "/resume" ? "noopener noreferrer" : undefined}
                 >
                   {l.label}
                 </Link>

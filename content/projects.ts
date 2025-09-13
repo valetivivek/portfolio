@@ -12,6 +12,15 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
+    id: "comite",
+    title: "Comite",
+    emoji: "📚",
+    summary: "Sleek manga and manhua reading platform with mobile-first design and smooth animations.",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Vite", "Framer Motion"],
+    github: "https://github.com/valetivivek/Comite",
+    featured: true,
+  },
+  {
     id: "jobscoop",
     title: "JobScoop",
     emoji: "🧭",

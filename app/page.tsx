@@ -14,9 +14,13 @@ export default function HomePage() {
       <About />
 
       {/* Education */}
-      <section className="py-12 md:py-16">
+      <section id="education" className="py-12 md:py-16">
         <div className="flex items-center justify-between">
-          <h2>🎓 Education</h2>
+          <h2 className="group">
+            <a href="#education" className="hover:text-primary-600 transition-colors">
+              🎓 Education
+            </a>
+          </h2>
         </div>
         <div className="mt-4 grid gap-6 md:grid-cols-2">
           <EducationCard
@@ -29,7 +33,7 @@ export default function HomePage() {
               gpa: "3.86",
               coursework: [
                 "Advanced Data Structures",
-                "Distributed Operating Systems",
+                "Distributed Systems",
                 "Software Engineering",
                 "NLP",
                 "Analysis of Algorithms",
@@ -51,7 +55,7 @@ export default function HomePage() {
                 "Java",
                 "Python",
                 "Web Applications",
-                "DBMS",
+                "Database Management Systems",
                 "IoT",
                 "Computer Security",
                 "Operating Systems",
@@ -65,9 +69,13 @@ export default function HomePage() {
       </section>
 
       {/* Experience preview */}
-      <section className="py-12 md:py-16">
+      <section id="experience" className="py-12 md:py-16">
         <div className="flex items-center justify-between">
-          <h2>💼 Experience</h2>
+          <h2 className="group">
+            <a href="#experience" className="hover:text-primary-600 transition-colors">
+              💼 Experience
+            </a>
+          </h2>
           <Link className="btn-ghost" href="/experience">View all</Link>
         </div>
         <div className="mt-4">
@@ -80,11 +88,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Projects */
-      }
-      <section className="py-12 md:py-16">
+      {/* Featured Projects */}
+      <section id="projects" className="py-12 md:py-16">
         <div className="flex items-center justify-between">
-          <h2>Featured Projects</h2>
+          <h2 className="group">
+            <a href="#projects" className="hover:text-primary-600 transition-colors">
+              Featured Projects
+            </a>
+          </h2>
           <Link className="btn-ghost" href="/projects">View all</Link>
         </div>
         <div className="mt-4 grid gap-6 sm:grid-cols-2">
@@ -101,8 +112,8 @@ export default function HomePage() {
             <p className="mt-1 text-slate-700">Reach out for roles or internships.</p>
           </div>
           <div className="flex gap-3">
-            <a className="btn-primary" href="mailto:vivekvaleti7053@gmail.com?subject=Portfolio%20Inquiry">Email me</a>
-            <a className="btn-ghost" href="/resume">View resume</a>
+            <a className="btn-primary" href="mailto:vivekvaleti7053@gmail.com?subject=SDE%20Internship%20Inquiry">Email Me</a>
+            <a className="btn-ghost" href="/resume" target="_blank" rel="noopener noreferrer">View Resume</a>
           </div>
         </div>
       </section>

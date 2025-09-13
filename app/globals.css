@@ -33,10 +33,19 @@ html, body {
 
 @layer components {
   .container-page { @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8; }
-  .btn-primary { @apply inline-flex items-center gap-2 rounded-md bg-primary-600 px-4 py-2 text-white shadow-subtle transition hover:bg-primary-700 focus-visible:ring-primary-600; }
-  .btn-ghost { @apply inline-flex items-center gap-2 rounded-md px-3 py-2 text-slate-700 hover:bg-slate-100 focus-visible:ring-primary-600; }
+  .btn-primary { @apply inline-flex items-center gap-2 rounded-md bg-primary-600 px-4 py-2 text-white shadow-subtle transition hover:bg-primary-700 focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2; }
+  .btn-ghost { @apply inline-flex items-center gap-2 rounded-md px-3 py-2 text-slate-700 hover:bg-slate-100 focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2; }
   .card { @apply rounded-lg border border-border bg-white shadow-subtle; }
   .tag { @apply rounded-md bg-slate-100 px-2 py-1 text-xs text-slate-700; }
+  .sr-only { @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0; }
+  .focus\:not-sr-only:focus { @apply static w-auto h-auto p-auto m-auto overflow-visible whitespace-normal; }
+  
+  /* Hover anchor link styles */
+  .group a:hover::after {
+    content: " #";
+    opacity: 0.5;
+    font-size: 0.8em;
+  }
 }
 
 
