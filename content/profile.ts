@@ -5,13 +5,14 @@ export const PROFILE = {
   linkedin: "https://www.linkedin.com/in/valetivishnuvivek/",
   github: "https://github.com/valetivivek",
   resumeHref: "/resume/resume.pdf",
-  headline: "Front end developer focused on performance, accessibility, and DX.",
+  headline: "Full-Stack Developer focused on performance, accessibility, and scalable systems.",
   summary:
-    "Front-end developer passionate about building fast, accessible, and maintainable interfaces. I focus on performant React/Next.js apps, scalable component systems with TypeScript, and smooth developer experience. I care deeply about clean abstractions, testable code, and shipping UIs that feel effortless. Recent work includes crafting reusable UI primitives, improving Lighthouse scores, and collaborating with product and design to iterate quickly. I enjoy working across the stack where needed, but I’m happiest polishing the details that make interfaces delightful and inclusive.",
+    "Full-Stack Developer passionate about building fast, accessible, and maintainable applications. I specialize in React/Next.js frontends, Go backends, and scalable system architecture. I care deeply about clean abstractions, testable code, and shipping products that feel effortless. Recent work includes crafting reusable UI primitives, improving Lighthouse scores, building ML pipelines, and collaborating with product and design to iterate quickly. I enjoy working across the entire stack, from database design to user experience, but I'm happiest solving complex problems with elegant solutions.",
   highlights: [
-    "Performance minded UI with Lighthouse 90 plus targets",
+    "Full-stack expertise with React/Next.js, Go, PostgreSQL, and Docker",
+    "Performance minded UI with Lighthouse 90+ targets",
     "Accessible components with keyboard and screen reader support",
-    "Clean React patterns with TypeScript and testing",
+    "Clean code patterns with TypeScript and comprehensive testing",
   ],
 } as const;
 
