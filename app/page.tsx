@@ -81,7 +81,7 @@ export default function HomePage() {
         <div className="mt-4">
           <ExperienceTimeline
             items={[
-              { role: "Graduate Research Assistant", company: "University of Florida", dates: "Aug 2025 – Present", highlights: ["Dashboards & ML pipelines", "5k+ synthetic records (‑30% runtime)"] },
+              { role: "Graduate Student Assistant", company: "University of Florida", dates: "Aug 2025 – Present", highlights: ["Dashboards & ML pipelines", "5k+ synthetic records (‑30% runtime)"] },
               { role: "Software Development Program Apprentice", company: "Vignan University", dates: "Jan 2024 – May 2024", highlights: ["Academic portal (‑40% workflows)", "Dashboards for 150+ users"] },
             ]}
           />

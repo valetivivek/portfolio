@@ -3,16 +3,16 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Experience",
-  description: "My professional experience as a Graduate Research Assistant at University of Florida and Software Development roles at Vignan University.",
+  description: "My professional experience as a Graduate Student Assistant at University of Florida and Software Development roles at Vignan University.",
   openGraph: {
     title: "Experience | Vishnu Vivek",
-    description: "My professional experience as a Graduate Research Assistant at University of Florida and Software Development roles at Vignan University.",
+    description: "My professional experience as a Graduate Student Assistant at University of Florida and Software Development roles at Vignan University.",
   },
 };
 
 const experience = [
   {
-    role: "Graduate Research Assistant",
+    role: "Graduate Student Assistant",
     company: "University of Florida",
     dates: "Aug 2025 – Present",
     highlights: [
