@@ -38,9 +38,9 @@ export default function ContactClient() {
     <main className="container-page">
         <section className="py-12 md:py-16">
           <h1>Contact</h1>
-          <p className="mt-3 max-w-2xl">I'm open to internships and roles in front‑end development. Feel free to reach out.</p>
+          <p className="mt-3 max-w-2xl">I'm open to full‑time SDE and full‑stack roles. Feel free to reach out.</p>
           <div className="mt-6 flex flex-wrap items-center gap-3">
-            <Link className="btn-primary" href="mailto:vivekvaleti7053@gmail.com?subject=SDE%20Internship%20Inquiry" aria-label="Email me">
+            <Link className="btn-primary" href="mailto:vivekvaleti7053@gmail.com?subject=Full-time%20SDE%20Opportunity" aria-label="Email me">
               Email Me
             </Link>
             <Link className="btn-ghost" href="https://www.linkedin.com/in/valetivishnuvivek/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
@@ -70,7 +70,7 @@ export default function ContactClient() {
             </div>
             <div className="flex items-center gap-3">
               <button type="submit" className="btn-primary" disabled={isPending}>{isPending ? "Sending..." : "Send message"}</button>
-              <a className="btn-ghost" href={`mailto:vivekvaleti7053@gmail.com?subject=${encodeURIComponent("SDE Internship Inquiry")}&body=${encodeURIComponent(message)}`}>Open email client</a>
+              <a className="btn-ghost" href={`mailto:vivekvaleti7053@gmail.com?subject=${encodeURIComponent("Full-time SDE Opportunity")}&body=${encodeURIComponent(message)}`}>Open email client</a>
             </div>
             {status === "success" && <p role="status" className="text-sm text-green-700">Message sent. Thank you!</p>}
             {status === "error" && <p role="alert" className="text-sm text-red-700">Something went wrong. Please try again or use the email button.</p>}

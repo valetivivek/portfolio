@@ -17,19 +17,10 @@ export default function About() {
       </motion.header>
       <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }}>
         <div className="rounded-2xl border bg-white p-6 md:p-8 md:max-w-none">
-          <div className="space-y-6">
-            <p className="text-lg leading-relaxed text-slate-700">
-              {ABOUT.copy}
-            </p>
-            
-            <div className="grid gap-3 sm:grid-cols-2">
-              {ABOUT.highlights.map((highlight, i) => (
-                <div key={i} className="flex items-start gap-3 p-3 rounded-lg bg-slate-50 hover:bg-slate-100 transition-colors">
-                  <span className="text-lg flex-shrink-0">{highlight.split(' ')[0]}</span>
-                  <span className="text-sm text-slate-700">{highlight.split(' ').slice(1).join(' ')}</span>
-                </div>
-              ))}
-            </div>
+          <div className="text-justify leading-relaxed tracking-[0.005em] space-y-5 text-slate-700 max-w-none">
+            {ABOUT.copy.split("\n\n").map((para, i) => (
+              <p key={i}>{para}</p>
+            ))}
           </div>
         </div>
       </motion.div>

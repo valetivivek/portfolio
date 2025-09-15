@@ -3,10 +3,10 @@ import ContactClient from "./ContactClient";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch with Vishnu Vivek for SDE internship opportunities and full-stack development roles. Open to new opportunities and collaborations.",
+  description: "Get in touch with Vishnu Vivek for full-time SDE and full-stack roles. Open to new opportunities and collaborations.",
   openGraph: {
     title: "Contact | Vishnu Vivek",
-    description: "Get in touch with Vishnu Vivek for SDE internship opportunities and full-stack development roles.",
+    description: "Get in touch with Vishnu Vivek for full-time SDE and full-stack roles.",
   },
 };
 
