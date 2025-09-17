@@ -13,11 +13,11 @@ export default function About() {
             About <span aria-hidden>✨</span>
           </a>
         </h2>
-        <p className="text-sm text-slate-600">Who I am & what I build</p>
+        <p className="text-sm text-slate-600 dark:text-slate-400">Who I am & what I build</p>
       </motion.header>
       <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }}>
-        <div className="rounded-2xl border bg-white p-6 md:p-8 md:max-w-none">
-          <div className="text-justify leading-relaxed tracking-[0.005em] space-y-5 text-slate-700 max-w-none">
+        <div className="rounded-2xl border bg-white p-6 md:p-8 md:max-w-none dark:bg-slate-900 dark:border-slate-700">
+          <div className="text-justify leading-relaxed tracking-[0.005em] space-y-5 text-slate-700 dark:text-slate-300 max-w-none">
             {ABOUT.copy.split("\n\n").map((para, i) => (
               <p key={i}>{para}</p>
             ))}

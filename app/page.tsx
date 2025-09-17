@@ -63,9 +63,7 @@ export default function HomePage() {
             }}
           />
         </div>
-        <div className="mt-4">
-          <a className="btn-ghost" href="/resume" target="_blank" rel="noopener noreferrer">View Resume</a>
-        </div>
+        {/* Resume CTA removed to keep Education section focused */}
       </section>
 
       {/* Experience preview */}

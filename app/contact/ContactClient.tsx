@@ -38,7 +38,7 @@ export default function ContactClient() {
     <main className="container-page">
         <section className="py-12 md:py-16">
           <h1>Contact</h1>
-          <p className="mt-3 max-w-2xl">I'm open to full‑time SDE and full‑stack roles. Feel free to reach out.</p>
+          <p className="mt-3 max-w-2xl text-slate-700 dark:text-slate-300">I'm open to full‑time SDE and full‑stack roles. Feel free to reach out.</p>
           <div className="mt-6 flex flex-wrap items-center gap-3">
             <Link className="btn-primary" href="mailto:vivekvaleti7053@gmail.com?subject=Full-time%20SDE%20Opportunity" aria-label="Email me">
               Email Me
@@ -53,20 +53,20 @@ export default function ContactClient() {
 
           <form onSubmit={onSubmit} className="mt-8 max-w-xl space-y-4">
             <div>
-              <label className="block text-sm font-medium text-slate-900" htmlFor="name">Name</label>
-              <input id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} required minLength={2} maxLength={80} className="mt-1 w-full rounded-md border border-slate-300 bg-white px-3 py-2 shadow-subtle focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2" />
+              <label className="block text-sm font-medium text-slate-900 dark:text-slate-100" htmlFor="name">Name</label>
+              <input id="name" name="name" placeholder="John Doe" value={name} onChange={(e) => setName(e.target.value)} required minLength={2} maxLength={80} className="mt-1 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-slate-900 placeholder-slate-400 shadow-subtle focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:placeholder-slate-500 dark:focus-visible:ring-offset-slate-900" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-900" htmlFor="email">Email</label>
-              <input id="email" name="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required className="mt-1 w-full rounded-md border border-slate-300 bg-white px-3 py-2 shadow-subtle focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2" />
+              <label className="block text-sm font-medium text-slate-900 dark:text-slate-100" htmlFor="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="johndoe@email.com" value={email} onChange={(e) => setEmail(e.target.value)} required className="mt-1 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-slate-900 placeholder-slate-400 shadow-subtle focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:placeholder-slate-500 dark:focus-visible:ring-offset-slate-900" />
             </div>
             <div className="hidden" aria-hidden>
               <label htmlFor="website">Website</label>
               <input id="website" name="website" tabIndex={-1} autoComplete="off" className="invisible h-0 w-0" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-900" htmlFor="message">Message</label>
-              <textarea id="message" name="message" value={message} onChange={(e) => setMessage(e.target.value)} required minLength={10} maxLength={5000} rows={6} className="mt-1 w-full rounded-md border border-slate-300 bg-white px-3 py-2 shadow-subtle focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2" />
+              <label className="block text-sm font-medium text-slate-900 dark:text-slate-100" htmlFor="message">Message</label>
+              <textarea id="message" name="message" placeholder="I’d like to collaborate on…" value={message} onChange={(e) => setMessage(e.target.value)} required minLength={10} maxLength={5000} rows={6} className="mt-1 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-slate-900 placeholder-slate-400 shadow-subtle focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:placeholder-slate-500 dark:focus-visible:ring-offset-slate-900" />
             </div>
             <div className="flex items-center gap-3">
               <button type="submit" className="btn-primary" disabled={isPending}>{isPending ? "Sending..." : "Send message"}</button>

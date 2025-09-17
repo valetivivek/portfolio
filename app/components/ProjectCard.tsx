@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import { ExternalLink, Github } from "lucide-react";
 import type { Project } from "@/content/projects";
 
@@ -14,29 +13,11 @@ export default function ProjectCard({ project, compact = false }: { project: Pro
       viewport={{ once: true, amount: 0.4 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
       whileHover={{ y: -4 }}
-      className={`card group overflow-hidden ${compact ? "p-4" : "p-0"}`}
+      className={`card group overflow-hidden ${compact ? "p-4" : "p-6"} h-full flex flex-col`}
     >
-      {/* Project Image */}
-      <div className="relative h-48 bg-gradient-to-br from-primary-50 to-accent-50 overflow-hidden">
-        {project.image ? (
-          <Image
-            src={project.image}
-            alt={`${project.title} project screenshot`}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-        ) : (
-          <div className="flex items-center justify-center h-full">
-            <div className="text-6xl opacity-20">
-              {project.emoji || "🚀"}
-            </div>
-          </div>
-        )}
-        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
-      </div>
+      {/* Project Header (image removed) */}
 
-      <div className={`${compact ? "p-4" : "p-6"}`}>
+      <div className="flex-1 flex flex-col">
         {/* Project Header */}
         <div className="flex items-start justify-between gap-4 mb-4">
           <div className="flex-1">
@@ -59,11 +40,11 @@ export default function ProjectCard({ project, compact = false }: { project: Pro
         </div>
 
         {/* Project Links */}
-        <div className="flex items-center gap-3">
+        <div className="mt-auto flex items-center gap-3">
           {project.github && (
             <Link 
               href={project.github} 
-              className="btn-ghost text-sm px-4 py-2" 
+              className="btn-ghost text-sm px-6 py-3" 
               target="_blank" 
               rel="noopener noreferrer" 
               aria-label={`GitHub repository for ${project.title}`}
@@ -75,7 +56,7 @@ export default function ProjectCard({ project, compact = false }: { project: Pro
           {project.live && (
             <Link 
               href={project.live} 
-              className="btn-primary text-sm px-4 py-2" 
+              className="btn-primary text-sm px-6 py-3" 
               target="_blank" 
               rel="noopener noreferrer" 
               aria-label={`Live site for ${project.title}`}

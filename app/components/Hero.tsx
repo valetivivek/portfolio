@@ -27,13 +27,13 @@ export default function Hero() {
               variants={fadeUp}
               className="mt-4 text-xl md:text-2xl text-slate-600 font-medium"
             >
-              Full-Stack Developer
+              SDE & Full-Stack Developer
             </motion.p>
             <motion.p 
               variants={fadeUp}
               className="mt-2 text-lg text-slate-500 max-w-2xl"
             >
-              Graduate CS Student at University of Florida • Building scalable applications with React, Next.js, and Go • Open to full-time opportunities
+              Graduate CS Student at University of Florida • Building scalable applications with React and Next.js • Open to full-time opportunities
             </motion.p>
           </div>
           

@@ -14,7 +14,7 @@ const experience = [
   {
     role: "Graduate Student Assistant",
     company: "University of Florida",
-    dates: "Aug 2025 – Present",
+    dates: "Aug 2024 – Present",
     highlights: [
       "Built dashboards and ML pipelines for fairness in gambling‑related AI models",
       "Generated 5,000+ synthetic records reducing validation runtime by 30%",
