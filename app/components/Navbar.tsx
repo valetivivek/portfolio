@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 import { Menu, X } from "lucide-react";
+import HeaderBrand from "@/components/HeaderBrand";
 
 const links = [
   { href: "/", label: "Home" },
@@ -54,7 +55,7 @@ export default function Navbar() {
           href="/" 
           className="text-xl font-bold text-slate-900 hover:text-primary-700 transition-colors dark:text-slate-100 dark:hover:text-emerald-200"
         >
-          Vishnu Vivek
+          <HeaderBrand />
         </Link>
         
         {/* Desktop Navigation */}

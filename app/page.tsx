@@ -9,20 +9,20 @@ import { PROJECTS } from "@/content/projects";
 
 export default function HomePage() {
   return (
-    <main className="container-page">
+    <main>
       <Hero />
       <About />
 
       {/* Education */}
-      <section id="education" className="py-16" aria-labelledby="education-heading">
-        <div className="flex items-center justify-between">
-          <h2 id="education-heading" className="group">
+      <section id="education" className="section-wrap" aria-labelledby="education-heading">
+        <div className="section-header">
+          <h2 id="education-heading" className="section-title">
             <a href="#education" className="hover:text-primary-600 transition-colors">
-              🎓 Education
+              <span className="mr-2" aria-hidden="true">🎓</span>Education
             </a>
           </h2>
         </div>
-        <div className="mt-6 grid gap-6 md:grid-cols-2 max-w-3xl mx-auto">
+        <div className="section-grid section-grid-md-2">
           <EducationCard
             index={0}
             edu={{
@@ -66,17 +66,17 @@ export default function HomePage() {
         {/* Resume CTA removed to keep Education section focused */}
       </section>
 
-      {/* Experience preview */}
-      <section id="experience" className="py-16" aria-labelledby="experience-heading">
-        <div className="flex items-center justify-between">
-          <h2 id="experience-heading" className="group">
+      {/* Experience */}
+      <section id="experience" className="section-wrap" aria-labelledby="experience-heading">
+        <div className="section-header">
+          <h2 id="experience-heading" className="section-title">
             <a href="#experience" className="hover:text-primary-600 transition-colors">
-              💼 Experience
+              <span className="mr-2" aria-hidden="true">💼</span>Experience
             </a>
           </h2>
           <Link className="btn-ghost" href="/experience">View all</Link>
         </div>
-        <div className="mt-4 max-w-3xl mx-auto">
+        <div className="section-grid">
           <ExperienceTimeline
             items={[
               { role: "Graduate Student Assistant", company: "University of Florida", dates: "Aug 2024 – Present", highlights: ["Dashboards & ML pipelines", "5k+ synthetic records (‑30% runtime)"] },
@@ -87,24 +87,24 @@ export default function HomePage() {
       </section>
 
       {/* Featured Projects */}
-      <section id="projects" className="py-16" aria-labelledby="projects-heading">
-        <div className="flex items-center justify-between">
-          <h2 id="projects-heading" className="group">
+      <section id="projects" className="section-wrap" aria-labelledby="projects-heading">
+        <div className="section-header">
+          <h2 id="projects-heading" className="section-title">
             <a href="#projects" className="hover:text-primary-600 transition-colors">
               Featured Projects
             </a>
           </h2>
           <Link className="btn-ghost" href="/projects">View all</Link>
         </div>
-        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {PROJECTS.filter((p) => p.featured).map((p) => (
             <ProjectCard key={p.id} project={p} />
           ))}
         </div>
       </section>
 
-      <section className="py-16" aria-labelledby="cta-heading">
-        <div className="card p-6 rounded-xl border bg-white shadow-sm flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+      <section className="section-wrap" aria-labelledby="cta-heading">
+        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
           <div>
             <h2 id="cta-heading">Let's work together</h2>
             <p className="mt-1 text-slate-700">Reach out for full-time opportunities.</p>

@@ -15,15 +15,15 @@ export default function Snapshot() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.3 }}
-        className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+        className="mt-4 flex flex-wrap gap-2"
       >
         {SNAPSHOT.items.map((item, i) => (
           <motion.li
             key={item}
             variants={rise}
-            className="card p-4 transition-shadow hover:-translate-y-0.5 hover:shadow-md"
+            className="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-slate-100 text-slate-800 hover:bg-slate-200 transition-colors"
           >
-            <span className="text-slate-800 text-sm">{item}</span>
+            <span>{item}</span>
           </motion.li>
         ))}
       </motion.ul>

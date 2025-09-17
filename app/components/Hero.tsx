@@ -7,15 +7,15 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="pt-12 md:pt-16 pb-4 md:pb-6">
+    <section className="pt-6 md:pt-8 lg:pt-10 pb-0 md:pb-0 mb-2 md:mb-2">
       <motion.div
         variants={staggerChildren}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.3 }}
-        className="max-w-4xl"
+        className="container-page"
       >
-        <motion.div variants={fadeUp} className="space-y-6">
+        <motion.div variants={fadeUp} className="space-y-3 md:space-y-4">
           <div>
             <motion.h1 
               variants={fadeUp}
@@ -33,7 +33,7 @@ export default function Hero() {
               variants={fadeUp}
               className="mt-2 text-base leading-relaxed text-slate-500 dark:text-slate-400 max-w-2xl"
             >
-              Graduate CS Student at University of Florida • Building scalable applications with React and Next.js • Available for immediate start
+              Graduate CS Student at University of Florida • Open to SDE and Full-Stack roles full time
             </motion.p>
           </div>
           
@@ -46,6 +46,7 @@ export default function Hero() {
               className="btn-primary text-lg px-6 py-3 font-semibold" 
               target="_blank" 
               rel="noopener noreferrer"
+              download="Vishnu_Vivek_Resume.pdf"
             >
               View Resume
             </a>
