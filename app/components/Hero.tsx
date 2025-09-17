@@ -19,21 +19,21 @@ export default function Hero() {
           <div>
             <motion.h1 
               variants={fadeUp}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900"
+              className="text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-100"
             >
               Vishnu Vivek
             </motion.h1>
             <motion.p 
               variants={fadeUp}
-              className="mt-4 text-xl md:text-2xl text-slate-600 font-medium"
+              className="mt-4 text-2xl text-slate-600 dark:text-slate-300 font-medium"
             >
               SDE & Full-Stack Developer
             </motion.p>
             <motion.p 
               variants={fadeUp}
-              className="mt-2 text-lg text-slate-500 max-w-2xl"
+              className="mt-2 text-base leading-relaxed text-slate-500 dark:text-slate-400 max-w-2xl"
             >
-              Graduate CS Student at University of Florida • Building scalable applications with React and Next.js • Open to full-time opportunities
+              Graduate CS Student at University of Florida • Building scalable applications with React and Next.js • Available for immediate start
             </motion.p>
           </div>
           
@@ -51,9 +51,9 @@ export default function Hero() {
             </a>
             <a 
               href="mailto:vivekvaleti7053@gmail.com?subject=Full-time%20SDE%20Opportunity" 
-              className="btn-ghost text-lg px-6 py-3 font-semibold"
+              className="px-6 py-3 rounded-md font-semibold text-lg bg-white text-emerald-600 border-2 border-emerald-600 hover:bg-emerald-600 hover:text-white hover:shadow-md transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2"
             >
-              Get In Touch
+              Hire Me
             </a>
           </motion.div>
           

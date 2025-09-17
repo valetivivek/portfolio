@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
@@ -135,10 +136,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
         <div className="flex min-h-screen flex-col">
           <Navbar />
-          <main id="main-content" className="flex-1">
+          <main id="main-content" className="flex-1 pt-16">
             {children}
           </main>
           <Footer />
+          <ScrollToTop />
         </div>
       </body>
     </html>
