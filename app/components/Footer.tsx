@@ -42,6 +42,11 @@ export default function Footer() {
           <section className="self-end md:text-right">
             <p className="text-xs text-slate-500 dark:text-slate-400">&copy; {new Date().getFullYear()} Vishnu Vivek.</p>
             <p className="text-xs text-slate-500 dark:text-slate-400">Built with Next.js, TypeScript, Tailwind.</p>
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+              <Link href="/privacy" className="hover:underline focus:outline-none focus:ring-2 focus:ring-brand.teal rounded">
+                Privacy Policy
+              </Link>
+            </p>
           </section>
         </div>
       </nav>

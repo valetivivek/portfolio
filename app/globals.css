@@ -37,6 +37,18 @@ html, body {
   @apply outline-none ring-2 ring-primary-600 ring-offset-2 ring-offset-white;
 }
 
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Typography defaults */
 @layer base {
   /* Typography Scale per audit */
@@ -52,7 +64,7 @@ html, body {
   .section-wrap { @apply container-page py-2 md:py-3; }
   .section-header { @apply flex flex-row justify-between items-center gap-4; }
   .section-title { @apply flex items-center gap-2; }
-  .section-subtitle { @apply text-sm font-medium text-gray-700 dark:text-slate-400; }
+  .section-subtitle { @apply text-sm font-medium text-slate-600 dark:text-slate-400; }
   .section-grid { @apply grid gap-4 md:gap-5; }
   .section-grid-md-2 { @apply md:grid-cols-2; }
   .btn-primary { 

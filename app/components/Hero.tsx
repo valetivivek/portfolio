@@ -25,13 +25,13 @@ export default function Hero() {
             </motion.h1>
             <motion.p 
               variants={fadeUp}
-              className="mt-4 text-2xl text-slate-600 dark:text-slate-300 font-medium"
+              className="mt-4 text-2xl text-slate-700 dark:text-slate-300 font-medium"
             >
               SDE & Full-Stack Developer
             </motion.p>
             <motion.p 
               variants={fadeUp}
-              className="mt-2 text-base leading-relaxed text-slate-500 dark:text-slate-400 max-w-2xl"
+              className="mt-2 text-base leading-relaxed text-slate-600 dark:text-slate-400 max-w-2xl"
             >
               Graduate CS Student at University of Florida • Open to SDE and Full-Stack roles full time
             </motion.p>
@@ -42,13 +42,11 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4 mt-8"
           >
             <a 
-              href="/resume" 
+              href="/resume/resume.pdf" 
               className="btn-primary text-lg px-6 py-3 font-semibold" 
-              target="_blank" 
-              rel="noopener noreferrer"
               download="Vishnu_Vivek_Resume.pdf"
             >
-              View Resume
+              Download Resume
             </a>
             <a 
               href="mailto:vivekvaleti7053@gmail.com?subject=Full-time%20SDE%20Opportunity" 
@@ -62,7 +60,7 @@ export default function Hero() {
             variants={fadeUp} 
             className="mt-8 flex items-center gap-4"
           >
-            <span className="text-sm text-slate-500 font-medium">Connect with me:</span>
+            <span className="text-sm text-slate-600 dark:text-slate-400 font-medium">Connect with me:</span>
             <div className="flex items-center gap-3">
               <a 
                 href="https://github.com/valetivivek" 
