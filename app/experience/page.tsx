@@ -49,7 +49,7 @@ export default function ExperiencePage() {
     <main className="container-page">
       <section className="py-12 md:py-16">
         <h1>Experience</h1>
-        <div className="mt-6">
+        <div className="mt-6 max-w-3xl mx-auto">
           <ExperienceTimeline items={experience} />
         </div>
       </section>

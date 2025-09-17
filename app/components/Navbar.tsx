@@ -48,7 +48,7 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <header className={`sticky top-0 z-50 w-full border-b border-slate-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 dark:bg-slate-900/90 dark:border-slate-700 ${scrolled ? "shadow-lg" : ""}`}>
+    <header className={`static z-50 w-full border-b border-slate-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 dark:bg-slate-900/90 dark:border-slate-700`}>
       <nav className="container-page flex h-16 items-center justify-between" aria-label="Main">
         <Link 
           href="/" 

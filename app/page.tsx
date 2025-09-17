@@ -22,7 +22,7 @@ export default function HomePage() {
             </a>
           </h2>
         </div>
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
+        <div className="mt-6 grid gap-6 md:grid-cols-2 max-w-3xl mx-auto">
           <EducationCard
             index={0}
             edu={{
@@ -76,7 +76,7 @@ export default function HomePage() {
           </h2>
           <Link className="btn-ghost" href="/experience">View all</Link>
         </div>
-        <div className="mt-4">
+        <div className="mt-4 max-w-3xl mx-auto">
           <ExperienceTimeline
             items={[
               { role: "Graduate Student Assistant", company: "University of Florida", dates: "Aug 2024 – Present", highlights: ["Dashboards & ML pipelines", "5k+ synthetic records (‑30% runtime)"] },
