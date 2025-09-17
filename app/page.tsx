@@ -14,7 +14,7 @@ export default function HomePage() {
       <About />
 
       {/* Education */}
-      <section id="education" className="py-12 md:py-16" aria-labelledby="education-heading">
+      <section id="education" className="py-16" aria-labelledby="education-heading">
         <div className="flex items-center justify-between">
           <h2 id="education-heading" className="group">
             <a href="#education" className="hover:text-primary-600 transition-colors">
@@ -67,7 +67,7 @@ export default function HomePage() {
       </section>
 
       {/* Experience preview */}
-      <section id="experience" className="py-12 md:py-16" aria-labelledby="experience-heading">
+      <section id="experience" className="py-16" aria-labelledby="experience-heading">
         <div className="flex items-center justify-between">
           <h2 id="experience-heading" className="group">
             <a href="#experience" className="hover:text-primary-600 transition-colors">
@@ -87,7 +87,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Projects */}
-      <section id="projects" className="py-12 md:py-16" aria-labelledby="projects-heading">
+      <section id="projects" className="py-16" aria-labelledby="projects-heading">
         <div className="flex items-center justify-between">
           <h2 id="projects-heading" className="group">
             <a href="#projects" className="hover:text-primary-600 transition-colors">
@@ -103,7 +103,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16" aria-labelledby="cta-heading">
+      <section className="py-16" aria-labelledby="cta-heading">
         <div className="card p-6 rounded-xl border bg-white shadow-sm flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
           <div>
             <h2 id="cta-heading">Let's work together</h2>

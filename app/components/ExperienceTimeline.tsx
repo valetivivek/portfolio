@@ -48,16 +48,13 @@ export default function ExperienceTimeline({ items }: { items: Item[] }) {
             whileTap={{ scale: 0.98 }}
           >
             <motion.h3 
-              className="text-base font-semibold text-slate-900 group-hover:text-primary-700 transition-colors duration-200"
-              animate={{
-                color: hoveredItem === idx ? "#059669" : "#0f172a"
-              }}
+              className="text-xl font-semibold text-slate-900 dark:text-slate-100 group-hover:text-primary-700 transition-colors duration-200"
             >
-              {item.role} <span className="text-slate-500 group-hover:text-slate-600 transition-colors duration-200">· {item.company}</span>
+              {item.role} <span className="text-slate-500 dark:text-slate-400 group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors duration-200">· {item.company}</span>
             </motion.h3>
-            <p className="mt-1 text-sm text-slate-600 group-hover:text-slate-700 transition-colors duration-200">{item.dates}</p>
+            <p className="mt-1 text-sm text-slate-600 dark:text-slate-400 group-hover:text-slate-700 transition-colors duration-200">{item.dates}</p>
             <motion.ul 
-              className="mt-3 list-inside list-disc text-sm text-slate-700 print:text-[12px] space-y-1"
+              className="mt-3 list-inside list-disc text-sm text-slate-700 dark:text-slate-300 print:text-[12px] space-y-1"
               initial={{ opacity: 0.8 }}
               animate={{ opacity: hoveredItem === idx ? 1 : 0.8 }}
               transition={{ duration: 0.2 }}
@@ -65,7 +62,7 @@ export default function ExperienceTimeline({ items }: { items: Item[] }) {
               {item.highlights.map((h, i) => (
                 <motion.li 
                   key={i}
-                  className="transition-all duration-200 hover:text-slate-900"
+                  className="transition-all duration-200 hover:text-slate-900 dark:hover:text-slate-100"
                   whileHover={{ x: 4 }}
                 >
                   {h}
