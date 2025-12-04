@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
@@ -40,7 +41,7 @@ export default function Navbar() {
     const next = theme === "light" ? "dark" : "light";
     setTheme(next);
     document.documentElement.classList.toggle("dark", next === "dark");
-    try { localStorage.setItem("theme", next); } catch {}
+    try { localStorage.setItem("theme", next); } catch { }
   };
 
   useEffect(() => {
@@ -51,13 +52,13 @@ export default function Navbar() {
   return (
     <header className={`static z-50 w-full border-b border-slate-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 dark:bg-slate-900/90 dark:border-slate-700`}>
       <nav className="container-page flex h-16 items-center justify-between" aria-label="Main">
-        <Link 
-          href="/" 
+        <Link
+          href="/"
           className="text-xl font-bold text-slate-900 hover:text-primary-700 transition-colors dark:text-slate-100 dark:hover:text-emerald-200"
         >
           <HeaderBrand />
         </Link>
-        
+
         {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center gap-2">
           {links.map((l) => {
@@ -66,14 +67,11 @@ export default function Navbar() {
               <li key={l.href}>
                 <Link
                   href={l.href}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                    isActive 
-                      ? "text-primary-700 bg-primary-50 dark:text-emerald-200 dark:bg-slate-800" 
-                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-200 dark:hover:text-white dark:hover:bg-slate-800"
-                  }`}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${isActive
+                    ? "text-primary-700 bg-primary-50 dark:text-emerald-200 dark:bg-slate-800"
+                    : "text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-200 dark:hover:text-white dark:hover:bg-slate-800"
+                    }`}
                   aria-current={isActive ? "page" : undefined}
-                  target={l.href === "/resume" ? "_blank" : undefined}
-                  rel={l.href === "/resume" ? "noopener noreferrer" : undefined}
                 >
                   {l.label}
                 </Link>
@@ -98,7 +96,15 @@ export default function Navbar() {
           className="ml-2 p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-white"
           aria-label="Toggle theme"
         >
-          {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+          <motion.div
+            key={theme}
+            initial={{ rotate: -90, scale: 0 }}
+            animate={{ rotate: 0, scale: 1 }}
+            exit={{ rotate: 90, scale: 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+          </motion.div>
         </button>
       </nav>
 
@@ -112,14 +118,11 @@ export default function Navbar() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
-                      isActive 
-                        ? "text-primary-700 bg-primary-50 dark:text-emerald-200 dark:bg-slate-800" 
-                        : "text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-200 dark:hover:text-white dark:hover:bg-slate-800"
-                    }`}
+                    className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${isActive
+                      ? "text-primary-700 bg-primary-50 dark:text-emerald-200 dark:bg-slate-800"
+                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-200 dark:hover:text-white dark:hover:bg-slate-800"
+                      }`}
                     aria-current={isActive ? "page" : undefined}
-                    target={l.href === "/resume" ? "_blank" : undefined}
-                    rel={l.href === "/resume" ? "noopener noreferrer" : undefined}
                   >
                     {l.label}
                   </Link>

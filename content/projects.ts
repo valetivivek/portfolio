@@ -1,7 +1,8 @@
+
 export type Project = {
   id: string;
   title: string;
-  emoji?: string;
+  icon?: string;
   summary: string;
   tags: string[];
   github?: string;
@@ -14,7 +15,7 @@ export const PROJECTS: Project[] = [
   {
     id: "comite",
     title: "Comite",
-    emoji: "📚",
+    icon: "Book",
     summary: "A sleek manga and manhua reading platform built with modern web technologies. Features mobile-first design, smooth animations, and an intuitive user interface for an enhanced reading experience.",
     tags: ["React", "TypeScript", "Tailwind CSS", "Vite", "Framer Motion"],
     github: "https://github.com/valetivivek/Comite",
@@ -24,7 +25,7 @@ export const PROJECTS: Project[] = [
   {
     id: "jobscoop",
     title: "JobScoop",
-    emoji: "🧭",
+    icon: "Compass",
     summary: "Full-stack job search platform with advanced filtering, secure authentication, and comprehensive dashboards. Built with Go backend and React frontend for optimal performance and scalability.",
     tags: ["Go", "React", "PostgreSQL", "Redis", "Docker", "Cypress"],
     github: "https://github.com/crazyotakuu/JobScoop",
@@ -34,7 +35,7 @@ export const PROJECTS: Project[] = [
   {
     id: "reddit-forum",
     title: "Discussion Forum",
-    emoji: "💬",
+    icon: "MessageSquare",
     summary: "A scalable Reddit-style discussion forum with concurrency safety, REST APIs, and robust backend architecture. Handles high-traffic scenarios with efficient database design.",
     tags: ["Go", "PostgreSQL", "REST", "Concurrency"],
     github: "https://github.com/valetivivek/redditclone",
@@ -44,7 +45,7 @@ export const PROJECTS: Project[] = [
   {
     id: "rule-bot",
     title: "Rule Based Chatbot",
-    emoji: "🤖",
+    icon: "Bot",
     summary: "Interactive chatbot with real-time communication capabilities. Features intelligent response handling, WebSocket integration, and containerized deployment for easy scaling.",
     tags: ["React", "Flask", "WebSockets", "Docker", "Python"],
     github: "https://github.com/valetivivek/rulebot",

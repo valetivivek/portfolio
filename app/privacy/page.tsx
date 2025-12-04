@@ -16,7 +16,7 @@ export default function PrivacyPage() {
         <h1 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-8">
           Privacy Policy
         </h1>
-        
+
         <div className="prose prose-slate dark:prose-invert max-w-none">
           <p className="text-slate-600 dark:text-slate-400 mb-6">
             <strong>Last updated:</strong> {new Date().toLocaleDateString()}
@@ -91,7 +91,7 @@ export default function PrivacyPage() {
             Changes to This Policy
           </h2>
           <p className="text-slate-600 dark:text-slate-400 mb-6">
-            We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
+            We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the &quot;Last updated&quot; date.
           </p>
         </div>
       </div>

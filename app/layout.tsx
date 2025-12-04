@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
@@ -93,7 +94,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       }
     },
     "knowsAbout": [
-      "React", "Next.js", "TypeScript", "Go", "Python", "PostgreSQL", 
+      "React", "Next.js", "TypeScript", "Go", "Python", "PostgreSQL",
       "Docker", "AWS", "Full-Stack Development", "Software Engineering"
     ],
     "seeks": "Full-time SDE and Full-Stack opportunities"
@@ -128,8 +129,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-screen bg-bg text-text">
-        <a 
-          href="#main-content" 
+        <a
+          href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary-600 focus:text-white focus:rounded-md focus:shadow-lg"
         >
           Skip to content
@@ -140,6 +141,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {children}
           </main>
           <Footer />
+          <ScrollProgress />
           <ScrollToTop />
         </div>
       </body>

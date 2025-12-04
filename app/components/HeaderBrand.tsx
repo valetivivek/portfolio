@@ -14,10 +14,10 @@ export default function HeaderBrand() {
 
   useEffect(() => {
     setMounted(true);
-    
+
     // Check for reduced motion preference
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    
+
     if (prefersReducedMotion) {
       setText(FINAL_TEXT);
       return;
@@ -36,10 +36,9 @@ export default function HeaderBrand() {
       setIsTyping(false);
     };
 
-    const erase = async (speed = 40) => {
+    const erase = async (target: string, speed = 40) => {
       setIsTyping(true);
-      const currentText = text;
-      for (let i = currentText.length; i >= 0; i--) {
+      for (let i = target.length; i >= 0; i--) {
         if (!isMounted) return;
         setText((t) => t.slice(0, -1));
         await new Promise((r) => setTimeout(r, speed));
@@ -61,7 +60,7 @@ export default function HeaderBrand() {
           timeoutRef.current = setTimeout(runSequence, 0);
           break;
         case 2: // Erase Portfolio
-          await erase();
+          await erase(TEMP_TEXT);
           currentPhase = 3;
           timeoutRef.current = setTimeout(runSequence, 0);
           break;
@@ -75,7 +74,7 @@ export default function HeaderBrand() {
           timeoutRef.current = setTimeout(runSequence, 0);
           break;
         case 5: // Erase Vishnu Vivek
-          await erase();
+          await erase(FINAL_TEXT);
           currentPhase = 0; // Loop back to start
           timeoutRef.current = setTimeout(runSequence, 0);
           break;
@@ -88,7 +87,6 @@ export default function HeaderBrand() {
     return () => {
       isMounted = false;
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
-      if (intervalRef.current) clearInterval(intervalRef.current);
     };
   }, []);
 
