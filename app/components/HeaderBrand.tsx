@@ -9,7 +9,6 @@ export default function HeaderBrand() {
   const [text, setText] = useState<string>(FINAL_TEXT);
   const [isTyping, setIsTyping] = useState<boolean>(false);
   const [mounted, setMounted] = useState<boolean>(false);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
