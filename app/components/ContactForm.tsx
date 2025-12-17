@@ -38,8 +38,8 @@ export default function ContactForm() {
     return (
         <form onSubmit={onSubmit} className="max-w-xl space-y-4" noValidate>
             <div>
-                <label className="block text-sm font-medium text-slate-900 dark:text-slate-100" htmlFor="name">
-                    Name <span className="text-red-500" aria-label="required">*</span>
+                <label className="block text-sm font-medium text-text" htmlFor="name">
+                    Name <span className="text-primary-500" aria-label="required">*</span>
                 </label>
                 <input
                     id="name"
@@ -50,18 +50,18 @@ export default function ContactForm() {
                     required
                     minLength={2}
                     maxLength={80}
-                    className="mt-1 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-slate-900 placeholder-slate-400 shadow-subtle focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:placeholder-slate-500 dark:focus-visible:ring-offset-slate-900"
+                    className="mt-1 w-full rounded-md border border-border bg-surface px-3 py-2 text-text placeholder-muted shadow-subtle focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-bg transition-shadow duration-200"
                     aria-describedby="name-error"
                 />
                 {name && name.length < 2 && (
-                    <p id="name-error" className="mt-1 text-sm text-red-600" role="alert">
+                    <p id="name-error" className="mt-1 text-sm text-red-500" role="alert">
                         Name must be at least 2 characters long.
                     </p>
                 )}
             </div>
             <div>
-                <label className="block text-sm font-medium text-slate-900 dark:text-slate-100" htmlFor="email">
-                    Email <span className="text-red-500" aria-label="required">*</span>
+                <label className="block text-sm font-medium text-text" htmlFor="email">
+                    Email <span className="text-primary-500" aria-label="required">*</span>
                 </label>
                 <input
                     id="email"
@@ -71,11 +71,11 @@ export default function ContactForm() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="mt-1 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-slate-900 placeholder-slate-400 shadow-subtle focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:placeholder-slate-500 dark:focus-visible:ring-offset-slate-900"
+                    className="mt-1 w-full rounded-md border border-border bg-surface px-3 py-2 text-text placeholder-muted shadow-subtle focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-bg transition-shadow duration-200"
                     aria-describedby="email-error"
                 />
                 {email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && (
-                    <p id="email-error" className="mt-1 text-sm text-red-600" role="alert">
+                    <p id="email-error" className="mt-1 text-sm text-red-500" role="alert">
                         Please enter a valid email address.
                     </p>
                 )}
@@ -86,8 +86,8 @@ export default function ContactForm() {
                 <input id="website" name="website" tabIndex={-1} autoComplete="off" className="invisible h-0 w-0" />
             </div>
             <div>
-                <label className="block text-sm font-medium text-slate-900 dark:text-slate-100" htmlFor="message">
-                    Message <span className="text-red-500" aria-label="required">*</span>
+                <label className="block text-sm font-medium text-text" htmlFor="message">
+                    Message <span className="text-primary-500" aria-label="required">*</span>
                 </label>
                 <textarea
                     id="message"
@@ -99,14 +99,14 @@ export default function ContactForm() {
                     minLength={10}
                     maxLength={5000}
                     rows={6}
-                    className="mt-1 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-slate-900 placeholder-slate-400 shadow-subtle focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:placeholder-slate-500 dark:focus-visible:ring-offset-slate-900"
+                    className="mt-1 w-full rounded-md border border-border bg-surface px-3 py-2 text-text placeholder-muted shadow-subtle focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-bg transition-shadow duration-200"
                     aria-describedby="message-error message-help"
                 />
-                <p id="message-help" className="mt-1 text-sm text-slate-500 dark:text-slate-400">
+                <p id="message-help" className="mt-1 text-sm text-muted">
                     Minimum 10 characters, maximum 5000 characters.
                 </p>
                 {message && message.length < 10 && (
-                    <p id="message-error" className="mt-1 text-sm text-red-600" role="alert">
+                    <p id="message-error" className="mt-1 text-sm text-red-500" role="alert">
                         Message must be at least 10 characters long.
                     </p>
                 )}
@@ -115,8 +115,8 @@ export default function ContactForm() {
                 <button type="submit" className="btn-primary" disabled={isPending}>{isPending ? "Sending..." : "Send message"}</button>
                 <a className="btn-ghost" href={`mailto:vivekvaleti7053@gmail.com?subject=${encodeURIComponent("Full-time SDE Opportunity")}&body=${encodeURIComponent(message)}`}>Open email client</a>
             </div>
-            {status === "success" && <p role="status" className="text-sm text-green-700">Message sent. Thank you!</p>}
-            {status === "error" && <p role="alert" className="text-sm text-red-700">Something went wrong. Please try again or use the email button.</p>}
+            {status === "success" && <p role="status" className="text-sm text-green-500">Message sent. Thank you!</p>}
+            {status === "error" && <p role="alert" className="text-sm text-red-500">Something went wrong. Please try again or use the email button.</p>}
         </form>
     );
 }

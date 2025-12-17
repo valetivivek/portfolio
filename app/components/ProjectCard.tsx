@@ -24,17 +24,15 @@ export default function ProjectCard({ project, compact = false }: { project: Pro
       whileHover={{ y: -4 }}
       className={`card group overflow-hidden ${compact ? "p-4" : "p-6"} h-full flex flex-col`}
     >
-      {/* Project Header (image removed) */}
-
       <div className="flex-1 flex flex-col">
         {/* Project Header */}
         <div className="flex items-start justify-between gap-4 mb-4">
           <div className="flex-1">
-            <h3 className="text-xl font-bold text-slate-900 group-hover:text-primary-700 transition-colors flex items-center gap-2">
-              {Icon && <Icon className="h-6 w-6 text-slate-900 dark:text-slate-100" aria-hidden />}
+            <h3 className="font-heading text-xl font-bold text-text group-hover:text-primary-500 transition-colors flex items-center gap-2">
+              {Icon && <Icon className="h-6 w-6 text-text" aria-hidden />}
               <span>{project.title}</span>
             </h3>
-            <p className="mt-2 text-slate-600 leading-relaxed">{project.summary}</p>
+            <p className="mt-2 text-muted leading-relaxed">{project.summary}</p>
           </div>
         </div>
 

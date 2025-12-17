@@ -9,12 +9,12 @@ Minimal, professional portfolio built with Next.js (App Router), TypeScript, Tai
 
 ## ✨ Introduction
 
-This is my personal portfolio website showcasing projects, experience, and contact information. It focuses on clarity, solid color design (no glassmorphism), subtle animations, and strong accessibility.
+This is my personal portfolio website showcasing projects, experience, and contact information. It features a "Zen Mode" aesthetic with a high-contrast dark theme (charcoal/orange) and a clean, readable light theme (cream/beige). It focuses on clarity, typography, subtle animations, and strong accessibility.
 
-- Framework: Next.js 14 (App Router) + TypeScript
-- Styling: Tailwind CSS, solid teal/olive palette
+- Framework: Next.js (App Router) + TypeScript
+- Styling: Tailwind CSS, Zen Theme palette (Charcoal/Cream/Orange)
 - Motion: Framer Motion (reduced motion respected)
-- Deployment: Vercel (Preview + Production)
+- Deployment: Vercel (Ready)
 - A11y: Semantic HTML, focus-visible, alt text, keyboard-friendly nav
 
 ---

@@ -14,12 +14,12 @@ type Edu = {
 
 export default function EducationCard({ edu, index = 0 }: { edu: Edu; index?: number }) {
   return (
-    <motion.article variants={fadeUp} custom={index} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} className="card p-6">
-      <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-100">{edu.degree}</h3>
-      <p className="text-slate-700 dark:text-slate-300">{edu.school} · {edu.location}</p>
-      <p className="text-sm text-slate-600 mt-1 dark:text-slate-400">{edu.dates}{edu.gpa ? ` · GPA ${edu.gpa}` : ""}</p>
+    <motion.article variants={fadeUp} custom={index} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} className="card p-6 border border-border bg-surface">
+      <h3 className="font-heading text-xl font-semibold text-text">{edu.degree}</h3>
+      <p className="text-muted">{edu.school} · {edu.location}</p>
+      <p className="text-sm text-muted mt-1">{edu.dates}{edu.gpa ? ` · GPA ${edu.gpa}` : ""}</p>
       {edu.coursework && edu.coursework.length > 0 && (
-        <p className="mt-2 text-sm text-slate-700 dark:text-slate-300"><span className="font-medium">Coursework:</span> {edu.coursework.join(", ")}</p>
+        <p className="mt-2 text-sm text-text"><span className="font-medium text-muted">Coursework:</span> {edu.coursework.join(", ")}</p>
       )}
     </motion.article>
   );

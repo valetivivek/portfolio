@@ -23,9 +23,10 @@ export default function ScrollToTop() {
     <button
       onClick={scrollTop}
       aria-label="Scroll to top"
-      className="fixed bottom-6 right-6 z-50 rounded-full border-2 border-emerald-600 bg-white/80 backdrop-blur p-3 text-emerald-600 shadow-lg transition-all duration-200 hover:bg-emerald-600 hover:text-white focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2 dark:bg-slate-900/80"
+      className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-text px-5 py-3 text-sm font-semibold text-bg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
     >
-      <ArrowUp className="h-5 w-5" />
+      <span>Back to the top</span>
+      <ArrowUp className="h-4 w-4" aria-hidden="true" />
     </button>
   );
 }

@@ -8,9 +8,9 @@ export default function ExperienceSection() {
         <section id="experience" className="section-wrap" aria-labelledby="experience-heading">
             <div className="section-header">
                 <h2 id="experience-heading" className="section-title">
-                    <a href="#experience" className="hover:text-primary-600 transition-colors flex items-center gap-2">
-                        <Building2 className="h-6 w-6 text-slate-900 dark:text-slate-100" aria-hidden="true" />
-                        <span>Experience</span>
+                    <a href="#experience" className="hover:text-primary-500 transition-colors flex items-center gap-2">
+                        <Building2 className="h-6 w-6 text-text" aria-hidden="true" />
+                        <span className="font-heading font-bold text-text">Experience</span>
                     </a>
                 </h2>
                 <Link className="btn-ghost" href="/experience">View all</Link>

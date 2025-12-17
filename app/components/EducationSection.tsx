@@ -7,9 +7,9 @@ export default function EducationSection() {
         <section id="education" className="section-wrap" aria-labelledby="education-heading">
             <div className="section-header">
                 <h2 id="education-heading" className="section-title">
-                    <a href="#education" className="hover:text-primary-600 transition-colors flex items-center gap-2">
-                        <GraduationCap className="h-6 w-6 text-slate-900 dark:text-slate-100" aria-hidden="true" />
-                        <span>Education</span>
+                    <a href="#education" className="hover:text-primary-500 transition-colors flex items-center gap-2">
+                        <GraduationCap className="h-6 w-6 text-text" aria-hidden="true" />
+                        <span className="font-heading font-bold text-text">Education</span>
                     </a>
                 </h2>
             </div>
