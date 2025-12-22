@@ -7,6 +7,16 @@ export type ExperienceItem = {
 
 export const EXPERIENCE: ExperienceItem[] = [
     {
+        role: "Machine Learning Engineer Intern",
+        company: "ReplyQuick LLC",
+        dates: "Dec 2025 – Mar 2026",
+        highlights: [
+            "Developed ML models & inference systems for ReplyQuick/DentalScan platforms",
+            "Optimized dataset labeling & model evaluation workflows",
+            "Integrated AI-driven image analysis into production backends",
+        ],
+    },
+    {
         role: "Graduate Student Assistant",
         company: "University of Florida",
         dates: "Aug 2024 – Present",

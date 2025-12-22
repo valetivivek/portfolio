@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid gap-8 py-10 sm:grid-cols-2 md:grid-cols-4">
           <section>
             <p className="font-semibold font-heading text-text">Vishnu Vivek</p>
-            <p className="mt-2 max-w-xs text-muted">Software Engineer focused on building reliable, user‑centric web applications.</p>
+            <p className="mt-2 max-w-xs text-muted">Software Engineer focused on building reliable and efficient software systems.</p>
           </section>
           <section>
             <p className="font-medium font-heading text-text">Navigation</p>
@@ -20,21 +20,24 @@ export default function Footer() {
             </ul>
           </section>
           <section>
-            <p className="font-medium font-heading text-text">Contact</p>
-            <ul role="list" className="mt-1 flex gap-1.5">
+            <p className="font-medium font-heading text-text mb-2">Contact</p>
+            <ul role="list" className="space-y-2">
               <li>
-                <a href="mailto:vivekvaleti7053@gmail.com" aria-label="Email" title="Email" className="p-2 rounded hover:bg-bg hover:text-text focus:outline-none focus:ring-2 focus:ring-primary-500 transition duration-200" rel="me">
+                <a href="mailto:vivekvaleti7053@gmail.com" className="flex items-center gap-2 text-muted hover:text-primary-500 focus:outline-none rounded transition duration-200 after:content-none before:content-none" rel="me">
                   <Mail className="h-4 w-4" aria-hidden />
+                  <span>Email</span>
                 </a>
               </li>
               <li>
-                <a href="https://github.com/valetivivek" aria-label="GitHub" title="GitHub" target="_blank" rel="me noopener noreferrer" className="p-2 rounded hover:bg-bg hover:text-text focus:outline-none focus:ring-2 focus:ring-primary-500 transition duration-200">
+                <a href="https://github.com/valetivivek" target="_blank" rel="me noopener noreferrer" className="flex items-center gap-2 text-muted hover:text-primary-500 focus:outline-none rounded transition duration-200 after:content-none before:content-none">
                   <Github className="h-4 w-4" aria-hidden />
+                  <span>GitHub</span>
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/valetivishnuvivek/" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="me noopener noreferrer" className="p-2 rounded hover:bg-bg hover:text-text focus:outline-none focus:ring-2 focus:ring-primary-500 transition duration-200">
+                <a href="https://www.linkedin.com/in/valetivishnuvivek/" target="_blank" rel="me noopener noreferrer" className="flex items-center gap-2 text-muted hover:text-primary-500 focus:outline-none rounded transition duration-200 after:content-none before:content-none">
                   <Linkedin className="h-4 w-4" aria-hidden />
+                  <span>LinkedIn</span>
                 </a>
               </li>
             </ul>

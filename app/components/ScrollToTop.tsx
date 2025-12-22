@@ -23,7 +23,7 @@ export default function ScrollToTop() {
     <button
       onClick={scrollTop}
       aria-label="Scroll to top"
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-text px-5 py-3 text-sm font-semibold text-bg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
+      className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-2xl bg-zinc-900 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
     >
       <span>Back to the top</span>
       <ArrowUp className="h-4 w-4" aria-hidden="true" />

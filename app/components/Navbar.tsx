@@ -32,7 +32,7 @@ export default function Navbar() {
   // Initialize theme (default dark for Zen aesthetic)
   useEffect(() => {
     const stored = typeof window !== "undefined" ? (localStorage.getItem("theme") as "light" | "dark" | null) : null;
-    const initial = stored ?? "dark";
+    const initial = stored ?? "light";
     setTheme(initial);
     document.documentElement.classList.toggle("dark", initial === "dark");
   }, []);

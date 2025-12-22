@@ -19,14 +19,14 @@ export default function PrivacyPage() {
 
         <div className="prose prose-slate dark:prose-invert max-w-none">
           <p className="text-slate-600 dark:text-slate-400 mb-6">
-            <strong>Last updated:</strong> {new Date().toLocaleDateString()}
+            <strong>Last updated:</strong> December 22, 2025
           </p>
 
           <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100 mt-8 mb-4">
-            Information We Collect
+            Information I Collect
           </h2>
           <p className="text-slate-600 dark:text-slate-400 mb-4">
-            This portfolio website is designed to showcase my work and skills. We collect minimal information:
+            This portfolio website is designed to showcase my work and skills. I collect minimal information:
           </p>
           <ul className="list-disc pl-6 text-slate-600 dark:text-slate-400 mb-6">
             <li>Contact information you voluntarily provide through the contact form</li>
@@ -35,10 +35,10 @@ export default function PrivacyPage() {
           </ul>
 
           <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100 mt-8 mb-4">
-            How We Use Your Information
+            How I Use Your Information
           </h2>
           <p className="text-slate-600 dark:text-slate-400 mb-4">
-            We use the information we collect to:
+            I use the information collected to:
           </p>
           <ul className="list-disc pl-6 text-slate-600 dark:text-slate-400 mb-6">
             <li>Respond to your inquiries and messages</li>
@@ -61,7 +61,7 @@ export default function PrivacyPage() {
             Data Security
           </h2>
           <p className="text-slate-600 dark:text-slate-400 mb-6">
-            We implement appropriate security measures to protect your personal information. However, no method of transmission over the internet is 100% secure.
+            I implement appropriate security measures to protect your personal information. However, no method of transmission over the internet is 100% secure.
           </p>
 
           <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100 mt-8 mb-4">
@@ -78,7 +78,7 @@ export default function PrivacyPage() {
           </ul>
 
           <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100 mt-8 mb-4">
-            Contact Us
+            Contact Me
           </h2>
           <p className="text-slate-600 dark:text-slate-400 mb-6">
             If you have any questions about this Privacy Policy, please contact me at{" "}
@@ -91,7 +91,7 @@ export default function PrivacyPage() {
             Changes to This Policy
           </h2>
           <p className="text-slate-600 dark:text-slate-400 mb-6">
-            We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the &quot;Last updated&quot; date.
+            I may update this Privacy Policy from time to time. I will notify you of any changes by posting the new Privacy Policy on this page and updating the &quot;Last updated&quot; date.
           </p>
         </div>
       </div>
