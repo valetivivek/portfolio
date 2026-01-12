@@ -2,14 +2,15 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ExternalLink, Github, Book, Compass, MessageSquare, Bot } from "lucide-react";
+import { ExternalLink, Github, Book, Compass, MessageSquare, Bot, Smartphone } from "lucide-react";
 import type { Project } from "@/content/projects";
 
 const iconMap: Record<string, any> = {
   Book,
   Compass,
   MessageSquare,
-  Bot
+  Bot,
+  Smartphone
 };
 
 export default function ProjectCard({ project, compact = false }: { project: Project; compact?: boolean }) {

@@ -13,6 +13,15 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
+    id: "hushhabbit",
+    title: "HushHabbit",
+    icon: "Smartphone",
+    summary: "A modern, privacy-focused habit tracking app for Android. Built with Jetpack Compose and Material 3, featuring streak tracking, smart reminders, and offline-first architecture.",
+    tags: ["Kotlin", "Jetpack Compose", "Room", "Hilt", "Android"],
+    github: "https://github.com/valetivivek/hushhabbit",
+    featured: true,
+  },
+  {
     id: "comite",
     title: "Comite",
     icon: "Book",
