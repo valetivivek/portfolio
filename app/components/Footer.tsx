@@ -23,7 +23,7 @@ export default function Footer() {
             <p className="font-medium font-heading text-text mb-2">Contact</p>
             <ul role="list" className="space-y-2">
               <li>
-                <a href="mailto:vivekvaleti7053@gmail.com" className="flex items-center gap-2 text-muted hover:text-primary-500 focus:outline-none rounded transition duration-200 after:content-none before:content-none" rel="me">
+                <a href="mailto:vishnuvivek.valeti@gmail.com" className="flex items-center gap-2 text-muted hover:text-primary-500 focus:outline-none rounded transition duration-200 after:content-none before:content-none" rel="me">
                   <Mail className="h-4 w-4" aria-hidden />
                   <span>Email</span>
                 </a>

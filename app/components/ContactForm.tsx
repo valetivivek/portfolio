@@ -2,6 +2,7 @@
 
 import { useState, useTransition } from "react";
 import Link from "next/link";
+import LoadingSpinner from "./LoadingSpinner";
 
 export default function ContactForm() {
     const [name, setName] = useState("");
@@ -80,7 +81,6 @@ export default function ContactForm() {
                     </p>
                 )}
             </div>
-            {/* Honeypot field */}
             <div className="hidden" aria-hidden="true">
                 <label htmlFor="website">Website</label>
                 <input id="website" name="website" tabIndex={-1} autoComplete="off" className="invisible h-0 w-0" />
@@ -112,8 +112,22 @@ export default function ContactForm() {
                 )}
             </div>
             <div className="flex items-center gap-3">
-                <button type="submit" className="btn-primary" disabled={isPending}>{isPending ? "Sending..." : "Send message"}</button>
-                <a className="btn-ghost" href={`mailto:vivekvaleti7053@gmail.com?subject=${encodeURIComponent("Full-time SDE Opportunity")}&body=${encodeURIComponent(message)}`}>Open email client</a>
+                <button type="submit" className="btn-primary" disabled={isPending}>
+                    {isPending ? (
+                        <>
+                            <LoadingSpinner size="sm" className="mr-2" />
+                            Sending...
+                        </>
+                    ) : (
+                        "Send message"
+                    )}
+                </button>
+                <button type="button" className="btn-ghost" onClick={() => {
+                    const subject = encodeURIComponent("Full-time SDE Opportunity");
+                    const body = encodeURIComponent(message);
+                    // Use server-side email endpoint to avoid exposing email in client code
+                    window.location.href = `/api/email?subject=${subject}&body=${body}`;
+                }}>Open email client</button>
             </div>
             {status === "success" && <p role="status" className="text-sm text-green-500">Message sent. Thank you!</p>}
             {status === "error" && <p role="alert" className="text-sm text-red-500">Something went wrong. Please try again or use the email button.</p>}

@@ -82,8 +82,8 @@ export default function PrivacyPage() {
           </h2>
           <p className="text-slate-600 dark:text-slate-400 mb-6">
             If you have any questions about this Privacy Policy, please contact me at{" "}
-            <a href="mailto:vivekvaleti7053@gmail.com" className="text-primary-600 hover:text-primary-700 underline">
-              vivekvaleti7053@gmail.com
+            <a href="mailto:vishnuvivek.valeti@gmail.com" className="text-primary-600 hover:text-primary-700 underline">
+              vishnuvivek.valeti@gmail.com
             </a>
           </p>
 

@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import ScrollProgress from "@/components/ScrollProgress";
+import ErrorBoundary from "@/components/ErrorBoundary";
+import ReadingProgress from "@/components/ReadingProgress";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const bricolage = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-bricolage", display: "swap" });
@@ -16,24 +18,24 @@ export const metadata: Metadata = {
   authors: [{ name: "Vishnu Vivek Valeti" }],
   creator: "Vishnu Vivek Valeti",
   publisher: "Vishnu Vivek Valeti",
-  metadataBase: new URL("https://vishnuvivek.dev"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://vishnuvivek.dev"),
   alternates: {
-    canonical: "https://vishnuvivek.dev",
+    canonical: process.env.NEXT_PUBLIC_SITE_URL || "https://vishnuvivek.dev",
   },
   openGraph: {
     title: "Vishnu Vivek - Full-Stack Developer",
     description: "Graduate CS student at University of Florida specializing in full-stack development with React/Next.js, Go, and modern web technologies. Open to full-time SDE and full-stack opportunities.",
-    url: "https://vishnuvivek.dev",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://vishnuvivek.dev",
     siteName: "Vishnu Vivek Portfolio",
     type: "website",
     locale: "en_US",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.svg",
         width: 1200,
         height: 630,
         alt: "Vishnu Vivek - Full-Stack Developer Portfolio",
-        type: "image/jpeg",
+        type: "image/svg+xml",
       },
     ],
   },
@@ -41,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Vishnu Vivek - Full-Stack Developer",
     description: "Graduate CS student at University of Florida specializing in full-stack development with React/Next.js, Go, and modern web technologies. Open to full-time SDE and full-stack opportunities.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.svg"],
     creator: "@vishnuvivek",
   },
   robots: {
@@ -57,11 +59,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.svg", sizes: "16x16", type: "image/svg+xml" },
+      { url: "/favicon-32x32.svg", sizes: "32x32", type: "image/svg+xml" },
     ],
     apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/apple-touch-icon.svg", sizes: "180x180", type: "image/svg+xml" },
     ],
     other: [
       { rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#059669" },
@@ -79,7 +81,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "jobTitle": "Full-Stack Developer",
     "description": "Graduate CS student at University of Florida specializing in full-stack development with React/Next.js, Go, and modern web technologies.",
     "url": "https://vishnuvivek.dev",
-    "image": "https://vishnuvivek.dev/og-image.jpg",
+    "image": `${process.env.NEXT_PUBLIC_SITE_URL || "https://vishnuvivek.dev"}/og-image.svg`,
     "sameAs": [
       "https://github.com/valetivivek",
       "https://www.linkedin.com/in/valetivishnuvivek/"
@@ -105,7 +107,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Vishnu Vivek Portfolio",
-    "url": "https://vishnuvivek.dev",
+    "url": process.env.NEXT_PUBLIC_SITE_URL || "https://vishnuvivek.dev",
     "description": "Portfolio website of Vishnu Vivek Valeti, Full-Stack Developer and Graduate CS student at University of Florida.",
     "author": {
       "@type": "Person",
@@ -114,6 +116,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "publisher": {
       "@type": "Person",
       "name": "Vishnu Vivek Valeti"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": `${process.env.NEXT_PUBLIC_SITE_URL || "https://vishnuvivek.dev"}/search?q={search_term_string}`
+      },
+      "query-input": "required name=search_term_string"
     }
   };
 
@@ -137,9 +147,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
         <div className="flex min-h-screen flex-col">
+          <ReadingProgress />
           <Navbar />
           <main id="main-content" className="flex-1">
-            {children}
+            <ErrorBoundary>
+              {children}
+            </ErrorBoundary>
           </main>
           <Footer />
           <ScrollProgress />

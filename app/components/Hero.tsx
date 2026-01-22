@@ -49,7 +49,7 @@ export default function Hero() {
               Download Resume
             </a>
             <a
-              href="mailto:vivekvaleti7053@gmail.com?subject=Full-time%20SDE%20Opportunity"
+              href="mailto:vishnuvivek.valeti@gmail.com?subject=Full-time%20SDE%20Opportunity"
               className="px-6 py-3 rounded-md font-semibold text-lg bg-transparent text-primary-500 border-2 border-primary-500 hover:bg-primary-500 hover:text-white hover:shadow-md transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
             >
               Hire Me
@@ -73,7 +73,7 @@ export default function Hero() {
                 <Linkedin className="h-5 w-5" aria-hidden />
               </a>
               <a
-                href="mailto:vivekvaleti7053@gmail.com?subject=Full-time%20SDE%20Opportunity"
+                href="mailto:vishnuvivek.valeti@gmail.com?subject=Full-time%20SDE%20Opportunity"
                 aria-label="Email me"
                 title="Email"
                 className="p-3 rounded-lg hover:bg-surface hover:text-text text-muted focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all duration-200 hover:scale-105"

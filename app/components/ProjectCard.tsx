@@ -5,7 +5,9 @@ import Link from "next/link";
 import { ExternalLink, Github, Book, Compass, MessageSquare, Bot, Smartphone } from "lucide-react";
 import type { Project } from "@/content/projects";
 
-const iconMap: Record<string, any> = {
+type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
+
+const iconMap: Record<string, IconComponent> = {
   Book,
   Compass,
   MessageSquare,
@@ -26,7 +28,6 @@ export default function ProjectCard({ project, compact = false }: { project: Pro
       className={`card group overflow-hidden ${compact ? "p-4" : "p-6"} h-full flex flex-col`}
     >
       <div className="flex-1 flex flex-col">
-        {/* Project Header */}
         <div className="flex items-start justify-between gap-4 mb-4">
           <div className="flex-1">
             <h3 className="font-heading text-xl font-bold text-text group-hover:text-primary-500 transition-colors flex items-center gap-2">
@@ -37,7 +38,6 @@ export default function ProjectCard({ project, compact = false }: { project: Pro
           </div>
         </div>
 
-        {/* Tech Stack */}
         <div className="mb-6">
           <ul className="flex flex-wrap gap-2">
             {project.tags.map((tag) => (
@@ -46,7 +46,6 @@ export default function ProjectCard({ project, compact = false }: { project: Pro
           </ul>
         </div>
 
-        {/* Project Links */}
         <div className="mt-auto flex items-center gap-3">
           {project.github && (
             <Link

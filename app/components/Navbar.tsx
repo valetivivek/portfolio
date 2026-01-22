@@ -23,13 +23,23 @@ export default function Navbar() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    let timeoutId: NodeJS.Timeout;
+    
+    const onScroll = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        setScrolled(window.scrollY > 8);
+      }, 16);
+    };
+    
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      clearTimeout(timeoutId);
+    };
   }, []);
 
-  // Initialize theme (default dark for Zen aesthetic)
   useEffect(() => {
     const stored = typeof window !== "undefined" ? (localStorage.getItem("theme") as "light" | "dark" | null) : null;
     const initial = stored ?? "light";
@@ -45,7 +55,6 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-    // Close mobile menu when route changes
     setMobileMenuOpen(false);
   }, [pathname]);
 
@@ -59,7 +68,6 @@ export default function Navbar() {
           <HeaderBrand />
         </Link>
 
-        {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center gap-2">
           {links.map((l) => {
             const isActive = pathname === l.href;
@@ -80,7 +88,6 @@ export default function Navbar() {
           })}
         </ul>
 
-        {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="md:hidden p-2 rounded-lg text-muted hover:text-text hover:bg-surface transition-colors"
@@ -89,8 +96,6 @@ export default function Navbar() {
         >
           {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
-
-        {/* Theme Toggle */}
         <button
           onClick={toggleTheme}
           className="ml-2 p-2 rounded-lg text-muted hover:text-text hover:bg-surface transition-colors focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
@@ -108,7 +113,6 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-border bg-bg/95 backdrop-blur">
           <ul className="container-page py-4 space-y-2">
